@@ -1,0 +1,2005 @@
+/* ==================== ESTILOS VANGUARDISTAS DE PROYECTOS ==================== */
+:root {
+    --primary-orange: #FF6B00;
+    --dark-bg: #0A0A0A;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* AURORAS Y RESPLANDORES EN LOS BORDES */
+.edge-aurora {
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.14) 0%, rgba(255, 107, 0, 0.03) 50%, transparent 75%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulseAurora 8s ease-in-out infinite alternate;
+}
+
+.aurora-top-left { top: -100px; left: -100px; }
+.aurora-top-right { top: -100px; right: -100px; animation-delay: 2s; }
+.aurora-mid-left { top: 40vh; left: -150px; animation-delay: 4s; }
+.aurora-mid-right { top: 50vh; right: -150px; animation-delay: 1s; }
+.aurora-bottom-left { bottom: -100px; left: -100px; animation-delay: 3s; }
+.aurora-bottom-right { bottom: -100px; right: -100px; animation-delay: 5s; }
+
+@keyframes pulseAurora {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 0.9; transform: scale(1.15); }
+}
+
+/* GLOBO TERRÁQUEO (ARRIBA A LA DERECHA) */
+.bg-globe-container {
+    position: fixed;
+    top: 5rem;
+    right: -100px;
+    width: min(450px, 40vw);
+    height: min(450px, 40vw);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    filter: drop-shadow(0 0 50px rgba(255, 107, 0, 0.25));
+    animation: floatGlobe 7s ease-in-out infinite alternate;
+}
+
+.bg-globe-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes floatGlobe {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-15px) rotate(3deg); }
+}
+
+/* ASTRONAUTA FLOTANDO (ABAJO A LA IZQUIERDA) */
+.bg-astronaut-container {
+    position: fixed;
+    bottom: -50px;
+    left: -80px;
+    width: min(420px, 38vw);
+    height: min(420px, 38vw);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    filter: drop-shadow(0 0 60px rgba(255, 107, 0, 0.25));
+    animation: floatAstronaut 9s ease-in-out infinite alternate;
+}
+
+.bg-astronaut-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes floatAstronaut {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-25px) rotate(-4deg); }
+}
+
+/* CONTENEDOR PRINCIPAL */
+.proyectos-main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 2rem 6rem 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.proyectos-vanguard-section {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.proyectos-header-center {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem auto;
+}
+
+.secondary-header {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.badge-tag-nosotros {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.proyectos-header-center h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.proyectos-sub {
+    font-size: 1.05rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+}
+
+/* GRILLAS DE TARJETAS */
+.vanguard-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.secondary-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* TARJETAS PRINCIPALES (SOFTWARE & WEB) - MÁXIMA PRIORIDAD E IMPONENCIA */
+.priority-card {
+    background: linear-gradient(145deg, rgba(28, 28, 28, 0.95), rgba(14, 14, 14, 0.98)) !important;
+    border: 1px solid rgba(255, 107, 0, 0.35) !important;
+    padding: 3.5rem 2.8rem !important;
+    box-shadow: 0 30px 60px rgba(255, 107, 0, 0.12) !important;
+}
+
+.priority-card:hover {
+    border-color: rgba(255, 107, 0, 0.8) !important;
+    box-shadow: 0 40px 80px rgba(255, 107, 0, 0.3) !important;
+}
+
+/* TARJETAS ESTÁNDAR VANGUARDISTAS */
+.vanguard-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.vanguard-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 107, 0, 0.6);
+    box-shadow: 0 35px 70px rgba(255, 107, 0, 0.22);
+}
+
+.vanguard-card:hover .vanguard-card-glow {
+    opacity: 1;
+}
+
+.vanguard-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.vanguard-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.18);
+    letter-spacing: -1px;
+    transition: color 0.4s ease;
+}
+
+.vanguard-card:hover .vanguard-num {
+    color: var(--primary-orange);
+}
+
+.vanguard-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+}
+
+.vanguard-content-body {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.vanguard-content-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.3px;
+}
+
+.vanguard-content-body p {
+    font-size: 0.9rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.vanguard-footer-action {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.arrow-circle {
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card:hover .vanguard-footer-action {
+    color: var(--primary-orange);
+}
+
+.vanguard-card:hover .arrow-circle {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: #000000;
+    transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+    .vanguard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .secondary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bg-globe-container, .bg-astronaut-container {
+        display: none; /* Ocultar en pantallas pequeñas para evitar solapamientos */
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==================== ESTILOS VANGUARDISTAS DE PROYECTOS ==================== */
+:root {
+    --primary-orange: #FF6B00;
+    --dark-bg: #0A0A0A;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* ==================== LUNA GIGANTE DE HORIZONTE (PARTE INFERIOR) ==================== */
+.horizon-moon-background {
+    position: fixed;
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(3000px, 300vw);
+    height: min(3000px, 300vw);
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.45;
+    filter: drop-shadow(0 -20px 80px rgba(255, 107, 0, 0.3));
+    animation: pulseHorizonMoon 8s ease-in-out infinite alternate;
+}
+
+.horizon-moon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes pulseHorizonMoon {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.4; }
+    100% { transform: translateX(-50%) scale(1.03); opacity: 0.52; }
+}
+
+/* ORBES AMBIENTALES */
+.ambient-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+.orb-1 { top: 10%; left: -10%; }
+.orb-2 { bottom: 10%; right: -10%; }
+
+/* CONTENEDOR PRINCIPAL */
+.proyectos-main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 2rem 6rem 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.proyectos-vanguard-section {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.proyectos-header-center {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem auto;
+}
+
+.secondary-header {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.badge-tag-nosotros {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.proyectos-header-center h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.proyectos-sub {
+    font-size: 1.05rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+}
+
+/* GRILLAS DE TARJETAS */
+.vanguard-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.secondary-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* TARJETAS PRINCIPALES (SOFTWARE & WEB) - MÁXIMA PRIORIDAD E IMPONENCIA */
+.priority-card {
+    background: linear-gradient(145deg, rgba(28, 28, 28, 0.95), rgba(14, 14, 14, 0.98)) !important;
+    border: 1px solid rgba(255, 107, 0, 0.35) !important;
+    padding: 3.5rem 2.8rem !important;
+    box-shadow: 0 30px 60px rgba(255, 107, 0, 0.12) !important;
+}
+
+.priority-card:hover {
+    border-color: rgba(255, 107, 0, 0.8) !important;
+    box-shadow: 0 40px 80px rgba(255, 107, 0, 0.3) !important;
+}
+
+/* TARJETAS ESTÁNDAR VANGUARDISTAS */
+.vanguard-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.vanguard-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 107, 0, 0.6);
+    box-shadow: 0 35px 70px rgba(255, 107, 0, 0.22);
+}
+
+.vanguard-card:hover .vanguard-card-glow {
+    opacity: 1;
+}
+
+.vanguard-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.vanguard-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.18);
+    letter-spacing: -1px;
+    transition: color 0.4s ease;
+}
+
+.vanguard-card:hover .vanguard-num {
+    color: var(--primary-orange);
+}
+
+.vanguard-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+}
+
+.vanguard-content-body {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.vanguard-content-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.3px;
+}
+
+.vanguard-content-body p {
+    font-size: 0.9rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.vanguard-footer-action {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.arrow-circle {
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card:hover .vanguard-footer-action {
+    color: var(--primary-orange);
+}
+
+.vanguard-card:hover .arrow-circle {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: #000000;
+    transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+    .vanguard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .secondary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==================== ESTILOS VANGUARDISTAS DE PROYECTOS ==================== */
+:root {
+    --primary-orange: #FF6B00;
+    --dark-bg: #0A0A0A;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* ==================== LUNA GIGANTE DE HORIZONTE INFERIOR ==================== */
+.horizon-moon-wrapper {
+    position: fixed;
+    bottom: -60vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 140vw);
+    height: min(1400px, 140vw);
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Resplandor naranja imponente sobre la luna estilo Vetra */
+.horizon-moon-glow {
+    position: absolute;
+    inset: -100px;
+    background: radial-gradient(circle at 50% 30%, rgba(255, 107, 0, 0.35) 0%, rgba(255, 68, 0, 0.12) 50%, transparent 75%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 1;
+    animation: pulseMoonGlow 6s ease-in-out infinite alternate;
+}
+
+.horizon-moon-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 -30px 100px rgba(255, 107, 0, 0.4));
+}
+
+@keyframes pulseMoonGlow {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    100% { transform: scale(1.05); opacity: 1; }
+}
+
+/* ORBES AMBIENTALES */
+.ambient-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+.orb-1 { top: 10%; left: -10%; }
+.orb-2 { bottom: 10%; right: -10%; }
+
+/* CONTENEDOR PRINCIPAL */
+.proyectos-main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 2rem 6rem 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.proyectos-vanguard-section {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.proyectos-header-center {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem auto;
+}
+
+.secondary-header {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.badge-tag-nosotros {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.proyectos-header-center h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.proyectos-sub {
+    font-size: 1.05rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+}
+
+/* GRILLAS DE TARJETAS */
+.vanguard-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.secondary-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* TARJETAS PRINCIPALES (SOFTWARE & WEB) - MÁXIMA PRIORIDAD E IMPONENCIA */
+.priority-card {
+    background: linear-gradient(145deg, rgba(28, 28, 28, 0.95), rgba(14, 14, 14, 0.98)) !important;
+    border: 1px solid rgba(255, 107, 0, 0.35) !important;
+    padding: 3.5rem 2.8rem !important;
+    box-shadow: 0 30px 60px rgba(255, 107, 0, 0.12) !important;
+}
+
+.priority-card:hover {
+    border-color: rgba(255, 107, 0, 0.8) !important;
+    box-shadow: 0 40px 80px rgba(255, 107, 0, 0.3) !important;
+}
+
+/* TARJETAS ESTÁNDAR VANGUARDISTAS */
+.vanguard-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.vanguard-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 107, 0, 0.6);
+    box-shadow: 0 35px 70px rgba(255, 107, 0, 0.22);
+}
+
+.vanguard-card:hover .vanguard-card-glow {
+    opacity: 1;
+}
+
+.vanguard-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.vanguard-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.18);
+    letter-spacing: -1px;
+    transition: color 0.4s ease;
+}
+
+.vanguard-card:hover .vanguard-num {
+    color: var(--primary-orange);
+}
+
+.vanguard-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+}
+
+.vanguard-content-body {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.vanguard-content-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.3px;
+}
+
+.vanguard-content-body p {
+    font-size: 0.9rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.vanguard-footer-action {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.arrow-circle {
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card:hover .vanguard-footer-action {
+    color: var(--primary-orange);
+}
+
+.vanguard-card:hover .arrow-circle {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: #000000;
+    transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+    .vanguard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .secondary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==================== ESTILOS VANGUARDISTAS DE PROYECTOS ==================== */
+:root {
+    --primary-orange: #FF6B00;
+    --dark-bg: #0A0A0A;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* ==================== LUNA EXAGERADAMENTE GIGANTE ==================== */
+.horizon-moon-wrapper {
+    position: fixed;
+    bottom: -1100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(3200px, 300vw);
+    height: min(3200px, 300vw);
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizon-moon-glow {
+    position: absolute;
+    inset: -150px;
+    background: radial-gradient(circle at 50% 25%, rgba(255, 107, 0, 0.45) 0%, rgba(255, 68, 0, 0.15) 50%, transparent 80%);
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 1;
+    animation: pulseMoonGlow 6s ease-in-out infinite alternate;
+}
+
+.horizon-moon-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 -50px 140px rgba(255, 107, 0, 0.5));
+}
+
+@keyframes pulseMoonGlow {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    100% { transform: scale(1.04); opacity: 1; }
+}
+
+/* ORBES AMBIENTALES */
+.ambient-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+.orb-1 { top: 10%; left: -10%; }
+.orb-2 { bottom: 10%; right: -10%; }
+
+/* CONTENEDOR PRINCIPAL */
+.proyectos-main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 2rem 6rem 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.proyectos-vanguard-section {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.proyectos-header-center {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem auto;
+}
+
+.badge-tag-nosotros {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.proyectos-header-center h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.proyectos-sub {
+    font-size: 1.05rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+}
+
+/* ==================== TARJETA ENCABEZADO SECUNDARIO ==================== */
+.secondary-header-card {
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(255, 107, 0, 0.3);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 850px;
+    margin: 5rem auto 3rem auto;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 107, 0, 0.05);
+}
+
+.badge-tag-nosotros-card {
+    font-size: 0.9rem;
+    letter-spacing: 3.5px;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    background: rgba(255, 107, 0, 0.1);
+    border: 1px solid rgba(255, 107, 0, 0.25);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+}
+
+.secondary-header-card h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+}
+
+.proyectos-sub-card {
+    font-size: 1.15rem;
+    color: #CCCCCC;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* GRILLAS DE TARJETAS */
+.vanguard-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.secondary-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* TARJETAS PRINCIPALES (SOFTWARE & WEB) */
+.priority-card {
+    background: linear-gradient(145deg, rgba(28, 28, 28, 0.95), rgba(14, 14, 14, 0.98)) !important;
+    border: 1px solid rgba(255, 107, 0, 0.35) !important;
+    padding: 3.5rem 2.8rem !important;
+    box-shadow: 0 30px 60px rgba(255, 107, 0, 0.12) !important;
+}
+
+.priority-card:hover {
+    border-color: rgba(255, 107, 0, 0.8) !important;
+    box-shadow: 0 40px 80px rgba(255, 107, 0, 0.3) !important;
+}
+
+/* TARJETAS ESTÁNDAR VANGUARDISTAS */
+.vanguard-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.vanguard-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 107, 0, 0.6);
+    box-shadow: 0 35px 70px rgba(255, 107, 0, 0.22);
+}
+
+.vanguard-card:hover .vanguard-card-glow {
+    opacity: 1;
+}
+
+.vanguard-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.vanguard-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.18);
+    letter-spacing: -1px;
+    transition: color 0.4s ease;
+}
+
+.vanguard-card:hover .vanguard-num {
+    color: var(--primary-orange);
+}
+
+.vanguard-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+}
+
+.vanguard-content-body {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.vanguard-content-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.3px;
+}
+
+.vanguard-content-body p {
+    font-size: 0.9rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.vanguard-footer-action {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.arrow-circle {
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card:hover .vanguard-footer-action {
+    color: var(--primary-orange);
+}
+
+.vanguard-card:hover .arrow-circle {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: #000000;
+    transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+    .vanguard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .secondary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==================== ESTILOS VANGUARDISTAS DE PROYECTOS ==================== */
+:root {
+    --primary-orange: #FF6B00;
+    --dark-bg: #0A0A0A;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* ==================== LUNA GIGANTE DE HORIZONTE (EQUILIBRADA) ==================== */
+.horizon-moon-wrapper {
+    position: fixed;
+    bottom: -75vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1800px, 180vw);
+    height: min(1800px, 180vw);
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizon-moon-glow {
+    position: absolute;
+    inset: -120px;
+    background: radial-gradient(circle at 50% 25%, rgba(255, 107, 0, 0.4) 0%, rgba(255, 68, 0, 0.12) 50%, transparent 80%);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    animation: pulseMoonGlow 6s ease-in-out infinite alternate;
+}
+
+.horizon-moon-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 -40px 120px rgba(255, 107, 0, 0.45));
+}
+
+@keyframes pulseMoonGlow {
+    0% { transform: scale(0.96); opacity: 0.7; }
+    100% { transform: scale(1.03); opacity: 1; }
+}
+
+/* ORBES AMBIENTALES */
+.ambient-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+.orb-1 { top: 10%; left: -10%; }
+.orb-2 { bottom: 10%; right: -10%; }
+
+/* CONTENEDOR PRINCIPAL */
+.proyectos-main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 2rem 6rem 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.proyectos-vanguard-section {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ==================== CAJA TRASLÚCIDA PARA EL TEXTO SUPERIOR ==================== */
+.header-glass-box {
+    background: rgba(10, 10, 10, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.badge-tag-nosotros {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.proyectos-header-center h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.proyectos-sub {
+    font-size: 1.1rem;
+    color: #D0D0D0;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ==================== TARJETA SECUNDARIA MINIMALISTA Y TRANSPARENTE ==================== */
+.secondary-header-minimal {
+    background: rgba(15, 15, 15, 0.45);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 2.2rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 5rem auto 2.5rem auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.secondary-header-minimal:hover {
+    border-color: rgba(255, 107, 0, 0.45);
+}
+
+.minimal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.secondary-header-minimal h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+}
+
+.secondary-header-minimal p {
+    font-size: 1rem;
+    color: #AAAAAA;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* GRILLAS DE TARJETAS */
+.vanguard-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.secondary-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* TARJETAS PRINCIPALES (SOFTWARE & WEB) */
+.priority-card {
+    background: linear-gradient(145deg, rgba(28, 28, 28, 0.95), rgba(14, 14, 14, 0.98)) !important;
+    border: 1px solid rgba(255, 107, 0, 0.35) !important;
+    padding: 3.5rem 2.8rem !important;
+    box-shadow: 0 30px 60px rgba(255, 107, 0, 0.12) !important;
+}
+
+.priority-card:hover {
+    border-color: rgba(255, 107, 0, 0.8) !important;
+    box-shadow: 0 40px 80px rgba(255, 107, 0, 0.3) !important;
+}
+
+/* TARJETAS ESTÁNDAR VANGUARDISTAS */
+.vanguard-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.vanguard-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 107, 0, 0.6);
+    box-shadow: 0 35px 70px rgba(255, 107, 0, 0.22);
+}
+
+.vanguard-card:hover .vanguard-card-glow {
+    opacity: 1;
+}
+
+.vanguard-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.vanguard-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.18);
+    letter-spacing: -1px;
+    transition: color 0.4s ease;
+}
+
+.vanguard-card:hover .vanguard-num {
+    color: var(--primary-orange);
+}
+
+.vanguard-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+}
+
+.vanguard-content-body {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.vanguard-content-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.3px;
+}
+
+.vanguard-content-body p {
+    font-size: 0.9rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.vanguard-footer-action {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.arrow-circle {
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card:hover .vanguard-footer-action {
+    color: var(--primary-orange);
+}
+
+.vanguard-card:hover .arrow-circle {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: #000000;
+    transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+    .vanguard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .secondary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==================== ESTILOS VANGUARDISTAS DE PROYECTOS ==================== */
+:root {
+    --primary-orange: #FF6B00;
+    --dark-bg: #0A0A0A;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #FFFFFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* ==================== LUNA CON ANIMACIÓN DE LEVITACIÓN ==================== */
+.horizon-moon-wrapper {
+    position: fixed;
+    bottom: -75vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1800px, 180vw);
+    height: min(1800px, 180vw);
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: levitateMoon 8s ease-in-out infinite alternate;
+}
+
+.horizon-moon-glow {
+    position: absolute;
+    inset: -120px;
+    background: radial-gradient(circle at 50% 25%, rgba(255, 107, 0, 0.4) 0%, rgba(255, 68, 0, 0.12) 50%, transparent 80%);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    animation: pulseMoonGlow 6s ease-in-out infinite alternate;
+}
+
+.horizon-moon-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 -40px 120px rgba(255, 107, 0, 0.45));
+}
+
+@keyframes levitateMoon {
+    0% { transform: translateX(-50%) translateY(0px); }
+    100% { transform: translateX(-50%) translateY(-22px); }
+}
+
+@keyframes pulseMoonGlow {
+    0% { transform: scale(0.96); opacity: 0.7; }
+    100% { transform: scale(1.03); opacity: 1; }
+}
+
+/* ORBES AMBIENTALES */
+.ambient-background {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.glow-orb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    border-radius: 50%;
+}
+
+.orb-1 { top: 10%; left: -10%; }
+.orb-2 { bottom: 10%; right: -10%; }
+
+/* CONTENEDOR PRINCIPAL */
+.proyectos-main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 2rem 6rem 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.proyectos-vanguard-section {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* CAJA TRASLÚCIDA PARA EL TEXTO SUPERIOR */
+.header-glass-box {
+    background: rgba(10, 10, 10, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.badge-tag-nosotros {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.proyectos-header-center h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.proyectos-sub {
+    font-size: 1.1rem;
+    color: #D0D0D0;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ==================== ESTILOS DIFERENCIALES PARA LAS TARJETAS 01 Y 02 ==================== */
+.special-glass-card-1 {
+    background: linear-gradient(135deg, rgba(35, 20, 12, 0.75), rgba(12, 12, 12, 0.88)) !important;
+    border: 1px solid rgba(255, 107, 0, 0.4) !important;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 60px rgba(255, 107, 0, 0.15) !important;
+}
+
+.special-glass-card-2 {
+    background: linear-gradient(135deg, rgba(12, 25, 35, 0.75), rgba(12, 12, 12, 0.88)) !important;
+    border: 1px solid rgba(0, 170, 255, 0.3) !important;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 60px rgba(0, 150, 255, 0.12) !important;
+}
+
+.special-glass-card-2:hover {
+    border-color: rgba(0, 170, 255, 0.7) !important;
+    box-shadow: 0 35px 70px rgba(0, 150, 255, 0.25) !important;
+}
+
+/* TARJETA SECUNDARIA MINIMALISTA Y TRANSPARENTE */
+.secondary-header-minimal {
+    background: rgba(15, 15, 15, 0.45);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 2.2rem 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 5rem auto 2.5rem auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.secondary-header-minimal:hover {
+    border-color: rgba(255, 107, 0, 0.45);
+}
+
+.minimal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.secondary-header-minimal h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+}
+
+.secondary-header-minimal p {
+    font-size: 1rem;
+    color: #AAAAAA;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==================== EFECTO HOVER BLUR INTERACTIVO (LAS 4 TARJETAS) ==================== */
+.blur-hover-group:hover .hover-blur-item {
+    filter: blur(5px);
+    opacity: 0.4;
+    transform: scale(0.97);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blur-hover-group .hover-blur-item:hover {
+    filter: blur(0px) !important;
+    opacity: 1 !important;
+    transform: translateY(-12px) scale(1.02) !important;
+}
+
+/* GRILLAS DE TARJETAS */
+.vanguard-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.secondary-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+/* TARJETAS ESTÁNDAR VANGUARDISTAS */
+.vanguard-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.vanguard-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(255, 107, 0, 0.6);
+    box-shadow: 0 35px 70px rgba(255, 107, 0, 0.22);
+}
+
+.vanguard-card:hover .vanguard-card-glow {
+    opacity: 1;
+}
+
+.vanguard-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.vanguard-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.18);
+    letter-spacing: -1px;
+    transition: color 0.4s ease;
+}
+
+.vanguard-card:hover .vanguard-num {
+    color: var(--primary-orange);
+}
+
+.vanguard-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+}
+
+.vanguard-content-body {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.vanguard-content-body h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.3px;
+}
+
+.vanguard-content-body p {
+    font-size: 0.9rem;
+    color: #9A9A9A;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.vanguard-footer-action {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.arrow-circle {
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vanguard-card:hover .vanguard-footer-action {
+    color: var(--primary-orange);
+}
+
+.vanguard-card:hover .arrow-circle {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: #000000;
+    transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+    .vanguard-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .secondary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .secondary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+iframe[src*="netlify"], div[id*="netlify-badge"], a[href*="netlify.com"] {
+    display: none !important;
+    visibility: hidden !important;
+}

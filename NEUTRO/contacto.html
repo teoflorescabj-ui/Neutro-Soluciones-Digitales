@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEUTRO | Contacto</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo_reducido.png" type="image/png">
+  
+  <!-- Font Awesome para Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles/index.styles.css">
+</head>
+<body>
+
+  <!-- FONDO: Esferas Gigantes y Luna en Órbita -->
+  <div class="giant-planets-bg">
+    <img src="img/esfera.png" alt="Esfera Neón Gigante" class="giant-planet planet-wireframe">
+    <img src="img/Planeta Coral y Turquesa.png" alt="Planeta Gigante" class="giant-planet planet-texture">
+    <!-- Luna Orbitando al Alrededor del Planeta Principal -->
+    <div class="moon-orbit-wrapper">
+      <img src="img/Luna bicolor de cráteres vibrantes.png" alt="Luna Bicolor" class="orbiting-moon">
+    </div>
+  </div>
+
+  <!-- Orbes ambientales -->
+  <div class="ambient-background">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <!-- Barra de Navegación -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="img/logo_general_transparente.png" alt="NEUTRO Logo" class="brand-logo">
+      </a>
+    </div>
+
+    <!-- Menú con animación de cápsula limpia -->
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="nosotros.html" class="nav-link">Nosotros</a>
+      <a href="servicios.html" class="nav-link">Servicios</a>
+      <a href="proyectos.html" class="nav-link">Proyectos</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+    </nav>
+
+    <!-- Redes Sociales Header -->
+    <div class="social-header">
+      <a href="https://instagram.com/neutro_s.d" target="_blank" aria-label="Instagram" class="social-icon-glow"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/5493804103864?text=Hola%20NEUTRO,%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" aria-label="WhatsApp" class="social-icon-glow"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neutro.soluciones.digitales@gmail.com" target="_blank" aria-label="Gmail" class="social-icon-glow"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE CONTACTO Y REDES -->
+  <main class="contact-zone-section">
+    
+    <!-- 1. REDES SOCIALES (ARRIBA) -->
+    <div class="sub-section-container">
+      <div class="section-header compact-header">
+        <h2>Redes Sociales Oficiales</h2>
+        <p>Conecta con nosotros a través de nuestros canales oficiales directos.</p>
+      </div>
+
+      <div class="contact-channels-grid">
+        <div class="contact-info-card">
+          <div class="info-card-icon whatsapp-ic">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp Directo</h3>
+          <p>Chatea al instante con un asesor para resolver dudas rápidas o presupuesto.</p>
+          <a href="https://wa.me/5493804103864?text=Hola%20NEUTRO,%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" class="info-card-btn whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje
+          </a>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="info-card-icon instagram-ic">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <h3>Instagram Oficial</h3>
+          <p>Síguenos para ver novedades, sorteos y nuevos proyectos en vivo.</p>
+          <a href="https://instagram.com/neutro_s.d" target="_blank" class="info-card-btn instagram-btn">
+            <i class="fa-brands fa-instagram"></i> @neutro_s.d
+          </a>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="info-card-icon gmail-ic">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <h3>Correo Electrónico</h3>
+          <p>Envíanos una consulta detallada a nuestra casilla oficial.</p>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neutro.soluciones.digitales@gmail.com" target="_blank" class="info-card-btn gmail-btn">
+            <i class="fa-regular fa-envelope"></i> Enviar Email
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. FORMULARIO DE CONTACTO DIRECTO (ABAJO) -->
+    <div class="sub-section-container">
+      <div class="section-header compact-header">
+        <h2>Contacto Directo</h2>
+        <p>Completa tus datos y selecciona obligatoriamente tu medio preferido para enviar la consulta.</p>
+      </div>
+
+      <div class="contact-form-container" id="contact-form-box">
+        <form id="dynamic-contact-form" onsubmit="handleDynamicSubmit(event)">
+          
+          <div class="form-group">
+            <label>Nombre y Apellido</label>
+            <input type="text" id="userName" placeholder="Ej: Mariana Gómez" required>
+          </div>
+
+          <!-- Selector de Vía Obligatorio -->
+          <div class="form-group">
+            <label>Selecciona obligatoriamente la vía de envío <span class="required-star">*</span></label>
+            <div class="custom-channel-selector">
+              <button type="button" id="tab-whatsapp" class="channel-tab" onclick="selectChannel('whatsapp')">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </button>
+              <button type="button" id="tab-gmail" class="channel-tab" onclick="selectChannel('gmail')">
+                <i class="fa-regular fa-envelope"></i> Gmail
+              </button>
+            </div>
+            <!-- Campo oculto para validar la selección obligatoria del canal -->
+            <input type="hidden" id="communicationChannel" value="" required>
+            <p id="channel-error" class="channel-validation-error">Por favor, selecciona WhatsApp o Gmail para continuar.</p>
+          </div>
+
+          <div class="form-group">
+            <label id="dynamicLabel">Número de Teléfono / WhatsApp o Correo</label>
+            <input type="text" id="dynamicInput" placeholder="Selecciona primero WhatsApp o Gmail arriba" required>
+          </div>
+
+          <div class="form-group">
+            <label>Mensaje / Consulta</label>
+            <textarea id="userMessage" rows="4" placeholder="Escribe tu consulta o el plan que te interesa..." required></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-orange form-submit-btn">
+            Enviar Consulta
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer Futurista idéntico al del Index -->
+  <footer class="footer">
+    <div class="footer-glow-bar"></div>
+    
+    <!-- Imagen de Ondas Paramétricas en Espiral Flotante -->
+    <img src="img/Ondas Naranjas Paramétricas en Espiral.png" alt="Ondas Naranjas Espiral" class="footer-floating-waves">
+
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="img/logo_general_transparente.png" alt="NEUTRO Logo" class="footer-logo">
+        </a>
+        <p>Soluciones Digitales a la medida de tu futuro.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Conéctate</h4>
+        <div class="social-icons">
+          <a href="https://instagram.com/neutro_s.d" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://wa.me/5493804103864?text=Hola%20NEUTRO,%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neutro.soluciones.digitales@gmail.com" target="_blank" class="social-btn"><i class="fa-regular fa-envelope"></i> Gmail</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2027 NEUTRO Soluciones Digitales. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Selección interactiva y obligatoria de canal (WhatsApp / Gmail)
+    function selectChannel(channel) {
+      const hiddenInput = document.getElementById("communicationChannel");
+      const label = document.getElementById("dynamicLabel");
+      const input = document.getElementById("dynamicInput");
+      const btn = document.getElementById("submitBtn");
+      const tabWa = document.getElementById("tab-whatsapp");
+      const tabGm = document.getElementById("tab-gmail");
+      const errorMsg = document.getElementById("channel-error");
+
+      hiddenInput.value = channel;
+      errorMsg.style.display = "none";
+
+      tabWa.className = "channel-tab";
+      tabGm.className = "channel-tab";
+
+      if (channel === "whatsapp") {
+        tabWa.classList.add("active-whatsapp");
+        label.textContent = "Número de Teléfono / WhatsApp";
+        input.placeholder = "Ej: 3804103864";
+        input.type = "tel";
+        btn.textContent = "Enviar Consulta por WhatsApp";
+      } else if (channel === "gmail") {
+        tabGm.classList.add("active-gmail");
+        label.textContent = "Correo Electrónico (Gmail)";
+        input.placeholder = "Ej: tuusuario@gmail.com";
+        input.type = "email";
+        btn.textContent = "Enviar Consulta por Gmail";
+      }
+    }
+
+    // Envío dinámico: redirige a la Web App de Gmail o WhatsApp Web
+    function handleDynamicSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("userName").value.trim();
+      const channel = document.getElementById("communicationChannel").value;
+      const contactInfo = document.getElementById("dynamicInput").value.trim();
+      const message = document.getElementById("userMessage").value.trim();
+      const errorMsg = document.getElementById("channel-error");
+
+      if (!channel) {
+        errorMsg.style.display = "block";
+        errorMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
+      if (!name || !contactInfo || !message) return;
+
+      if (channel === "whatsapp") {
+        const phoneNumber = "5493804103864";
+        const text = `Hola NEUTRO, mi nombre es *${name}* (${contactInfo}).%0A%0A*Detalle:* ${encodeURIComponent(message)}`;
+        window.open(`https://wa.me/${phoneNumber}?text=${text}`, "_blank");
+      } else if (channel === "gmail") {
+        const emailAddress = "neutro.soluciones.digitales@gmail.com";
+        const subject = encodeURIComponent(`Nueva consulta web de ${name}`);
+        const body = encodeURIComponent(`Hola NEUTRO,\n\nMi nombre es ${name}.\nMi contacto: ${contactInfo}\n\nMensaje:\n${message}`);
+        
+        const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${subject}&body=${body}`;
+        window.open(gmailWebUrl, "_blank");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUTRO | Servicios</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/logo_reducido.png">
+    
+    <!-- Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- VINCULACIÓN CON LOS ARCHIVOS CSS -->
+    <link rel="stylesheet" href="styles/index.styles.css">
+    <link rel="stylesheet" href="styles/styles.servicios.css">
+</head>
+<body>
+
+    <!-- Orbes ambientales de neón sutiles -->
+    <div class="ambient-background">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <!-- Barra de Navegación Estándar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo_general_transparente.png" alt="NEUTRO Logo" class="brand-logo">
+            </a>
+        </div>
+
+        <!-- Menú de Navegación -->
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="nosotros.html" class="nav-link">Nosotros</a>
+            <a href="servicios.html" class="nav-link active">Servicios</a>
+            <a href="proyectos.html" class="nav-link">Proyectos</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+        </nav>
+
+        <!-- Redes Sociales + Botón Hamburguesa -->
+        <div class="nav-actions">
+            <div class="social-header">
+                <a href="https://instagram.com/neutro_s.d" target="_blank" aria-label="Instagram" class="social-icon-glow"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5493804103864?text=Hola%20NEUTRO,%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" aria-label="WhatsApp" class="social-icon-glow"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neutro.soluciones.digitales@gmail.com" target="_blank" aria-label="Gmail" class="social-icon-glow"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO PRINCIPAL CON EL ORBE SOLAR ROJO/NARANJA AMPLIADO -->
+    <main class="services-hero-container">
+        <div class="solar-orb-background">
+            <img src="img/Orbe solar rojo y naranja.png" alt="Orbe Solar NEUTRO">
+        </div>
+
+        <div class="services-hero-content">
+            <span class="services-subtitle-top">⚡ FRAMEWORK DE SOFTWARE PARA LLEVARTE MÁS LEJOS</span>
+            <h1 class="services-main-title">ARQUITECTURA DIGITAL<br>DE ALTO RENDIMIENTO</h1>
+            <p class="services-hero-desc">
+                Soporte integral para tu crecimiento en cada paso del camino, sin importar hacia dónde te dirijas. Diseñamos ecosistemas digitales escalables, seguros y de velocidad superior adaptados a los estándares corporativos más exigentes.
+            </p>
+        </div>
+
+        <div class="metrics-floating-row">
+            <div class="metric-item-side">
+                <span class="metric-number">5</span>
+                <span class="metric-label">Sistemas funcionando</span>
+            </div>
+            <div class="metric-item-side">
+                <span class="metric-number">10</span>
+                <span class="metric-label">Lenguajes variados</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECCIÓN DE TARJETAS DE SERVICIOS -->
+    <section class="services-cards-section" id="buscando">
+        <div class="section-custom-bg-image">
+            <img src="img/Planeta Saturno entre nubes coloridas.png" alt="Planeta con nubes NEUTRO">
+        </div>
+
+        <div class="services-section-header">
+            <span class="section-tag-sub">EXPLORA NUESTRAS SOLUCIONES</span>
+            <h2 class="section-main-heading">¿Qué estás buscando?</h2>
+            <p class="section-main-desc">Haz clic en el servicio de tu interés para cotizar, consultar especificaciones técnicas o iniciar tu proyecto directamente con nuestro equipo de ingeniería.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card" onclick="seleccionarServicio('Página web estática')">
+                <div class="card-badge">01</div>
+                <h3>Página web estática</h3>
+                <p>Sitios web ultrarrápidos, modernos y optimizados para buscadores (SEO), ideales para dar a conocer tu marca o portafolio profesional con un impacto visual inigualable.</p>
+                <span class="card-action-text">Seleccionar servicio →</span>
+            </div>
+            <div class="card" onclick="seleccionarServicio('Software para empresas y negocios')">
+                <div class="card-badge">02</div>
+                <h3>Software para empresas y negocios</h3>
+                <p>Sistemas ERP y CRM a medida para automatizar operaciones complejas, gestionar inventarios en tiempo real, controlar clientes y maximizar la productividad operativa.</p>
+                <span class="card-action-text">Seleccionar servicio →</span>
+            </div>
+            <div class="card" onclick="seleccionarServicio('Página web funcional')">
+                <div class="card-badge">03</div>
+                <h3>Página web funcional</h3>
+                <p>Plataformas interactivas avanzadas equipadas con bases de datos dinámicas, pasarelas de pago seguras y paneles de control personalizados para usuarios y administradores.</p>
+                <span class="card-action-text">Seleccionar servicio →</span>
+            </div>
+            <div class="card" onclick="seleccionarServicio('Software personal')">
+                <div class="card-badge">04</div>
+                <h3>Software personal</h3>
+                <p>Herramientas y aplicaciones digitales de escritorio o web diseñadas específicamente para resolver necesidades particulares, optimizar flujos personales y automatizar tareas.</p>
+                <span class="card-action-text">Seleccionar servicio →</span>
+            </div>
+            <div class="card" onclick="seleccionarServicio('Edicion y produccion de contenido')">
+                <div class="card-badge">05</div>
+                <h3>Edicion y produccion de contenido</h3>
+                <p>Creación, postproducción y edición profesional de contenido audiovisual de alto impacto para potenciar la presencia de tu marca en diversas plataformas digitales.</p>
+                <span class="card-action-text">Seleccionar servicio →</span>
+            </div>
+            <div class="card" onclick="seleccionarServicio('Diseño gráfico y branding')">
+                <div class="card-badge">06</div>
+                <h3>Diseño gráfico y branding</h3>
+                <p>Construcción de identidad visual corporativa integral, incluyendo diseño de logotipos memorables, guías de estilo, paletas de colores y sistemas gráficos coherentes.</p>
+                <span class="card-action-text">Seleccionar servicio →</span>
+            </div>
+        </div>
+
+        <!-- PANEL DESPLEGABLE DE CONTACTO POR SERVICIO -->
+        <div id="panel-contacto-servicio" class="panel-servicio-contacto">
+            <h3 id="titulo-servicio-elegido" class="panel-service-title">Servicio seleccionado</h3>
+            <p class="panel-service-desc">Completa tus datos de contacto para enviar la petición específica y recibir asesoramiento técnico inmediato.</p>
+            
+            <div class="form-group-custom">
+                <label for="email-servicio">Tu Correo Electrónico (Gmail)</label>
+                <input type="email" id="email-servicio" placeholder="tucorreo@gmail.com" required class="input-servicios-form">
+            </div>
+
+            <div class="form-group-custom">
+                <label for="telefono-servicio">Número de Teléfono (WhatsApp)</label>
+                <div class="phone-input-wrapper">
+                    <span class="phone-prefix">+54 9</span>
+                    <input type="tel" id="telefono-servicio" placeholder="3804103864" required class="phone-input-field">
+                </div>
+            </div>
+
+            <div class="form-group-custom">
+                <label for="mensaje-servicio">Detalles, Objetivos o Requerimientos</label>
+                <textarea id="mensaje-servicio" rows="4" placeholder="Cuéntanos más sobre los objetivos de tu proyecto..." class="textarea-servicios-form"></textarea>
+            </div>
+
+            <div class="form-buttons-row">
+                <button type="button" class="btn-whatsapp-serv" onclick="enviarWhatsAppServicio()">Enviar por WhatsApp</button>
+                <button type="button" class="btn-gmail-serv" onclick="enviarCorreoServicio()">Enviar por Gmail</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER FUTURISTA COMPLETO -->
+    <footer class="footer">
+        <div class="footer-glow-bar"></div>
+        
+        <img src="img/Ondas Naranjas Paramétricas en Espiral.png" alt="Ondas Naranjas Espiral" class="footer-floating-waves">
+
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="img/logo_general_transparente.png" alt="NEUTRO Logo" class="footer-logo">
+                </a>
+                <p>Soluciones Digitales a la medida de tu futuro.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Conéctate</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/neutro_s.d" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://wa.me/5493804103864?text=Hola%20NEUTRO,%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neutro.soluciones.digitales@gmail.com" target="_blank" class="social-btn"><i class="fa-regular fa-envelope"></i> Gmail</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2027 NEUTRO Soluciones Digitales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Menú Hamburguesa Responsive
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navItems = document.querySelectorAll('.nav-link');
+
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isActive = navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active', isActive);
+            menuToggle.setAttribute('aria-expanded', isActive);
+        });
+
+        navItems.forEach((link) => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        let servicioSeleccionado = "";
+
+        function seleccionarServicio(nombreServicio) {
+            servicioSeleccionado = nombreServicio;
+            const panel = document.getElementById('panel-contacto-servicio');
+            const titulo = document.getElementById('titulo-servicio-elegido');
+            
+            titulo.textContent = `Has seleccionado: ${nombreServicio}`;
+            panel.classList.add('activo');
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function enviarWhatsAppServicio() {
+            const email = document.getElementById('email-servicio').value;
+            const telefonoIngresado = document.getElementById('telefono-servicio').value;
+            const mensaje = document.getElementById('mensaje-servicio').value;
+
+            if(!email || !telefonoIngresado) {
+                alert('Por favor completa al menos tu Gmail y número de teléfono.');
+                return;
+            }
+
+            const miNumero = "5493804103864";
+            const texto = `Hola NEUTRO, me interesa el servicio de *${servicioSeleccionado}*:%0A%0A- *Gmail:* ${email}%0A- *Teléfono:* +54 9 ${telefonoIngresado}%0A- *Detalles:* ${mensaje || 'Sin detalles adicionales'}`;
+            window.open(`https://wa.me/${miNumero}?text=${texto}`, '_blank');
+        }
+
+        function enviarCorreoServicio() {
+            const email = document.getElementById('email-servicio').value;
+            const telefonoIngresado = document.getElementById('telefono-servicio').value;
+            const mensaje = document.getElementById('mensaje-servicio').value;
+
+            if(!email || !telefonoIngresado) {
+                alert('Por favor completa al menos tu Gmail y número de teléfono.');
+                return;
+            }
+
+            const tuCorreo = "neutro.soluciones.digitales@gmail.com";
+            const asunto = encodeURIComponent(`Consulta de servicio: ${servicioSeleccionado} (NEUTRO)`);
+            const cuerpo = encodeURIComponent(`Hola NEUTRO,\n\nEstoy interesado/a en contratar el siguiente servicio: ${servicioSeleccionado}\n\nMi Gmail: ${email}\nTeléfono: +54 9 ${telefonoIngresado}\n\nDetalles adicionales:\n${mensaje || 'Sin detalles adicionales'}`);
+
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${tuCorreo}&su=${asunto}&body=${cuerpo}`, '_blank');
+        }
+    </script>
+</body>
+</html>

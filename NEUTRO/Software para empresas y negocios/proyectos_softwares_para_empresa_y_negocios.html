@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software para Empresas y Negocios — NEUTRO</title>
+    <link rel="icon" type="image/png" href="../img/logo_reducido.png">
+    
+    <!-- Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./styles.softwares.css">
+</head>
+<body class="pagina-software">
+
+    <!-- FONDO: Esferas Gigantes y Luna en Órbita -->
+    <div class="giant-planets-bg">
+      <img src="../img/esfera.png" alt="Esfera Neón Gigante" class="giant-planet planet-wireframe">
+      <img src="../img/Planeta Coral y Turquesa.png" alt="Planeta Gigante" class="giant-planet planet-texture">
+      <div class="moon-orbit-wrapper">
+        <img src="../img/Luna bicolor de cráteres vibrantes.png" alt="Luna Bicolor" class="orbiting-moon">
+      </div>
+    </div>
+
+    <!-- Orbes ambientales con luces naranjas de fondo -->
+    <div class="ambient-background">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+    </div>
+
+    <!-- Menú de navegación superior -->
+    <header class="navbar">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../img/logo_general_transparente.png" alt="NEUTRO Logo" class="brand-logo">
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">Inicio</a>
+            <a href="../nosotros.html" class="nav-link">Nosotros</a>
+            <a href="../servicios.html" class="nav-link">Servicios</a>
+            <a href="../proyectos.html" class="nav-link">Proyectos</a>
+            <a href="../contacto.html" class="nav-link">Contacto</a>
+        </nav>
+
+        <div class="social-header">
+            <a href="https://instagram.com/neutro_s.d" target="_blank" aria-label="Instagram" class="social-icon-glow"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/5493804103864?text=Hola%20NEUTRO,%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" aria-label="WhatsApp" class="social-icon-glow"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neutro.soluciones.digitales@gmail.com" target="_blank" aria-label="Gmail" class="social-icon-glow"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <!-- Contenido principal con los 4 softwares interactivos -->
+    <main style="flex: 1; padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; width: 100%; z-index: 2;">
+        
+        <!-- Volver al Inicio -->
+        <a href="../proyectos.html" class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver a Proyectos</a>
+
+        <div class="software-list-container">
+
+            <!-- SOFTWARE 1: AGUA OASIS -->
+            <div class="oasis-interactive-box">
+                <div class="oasis-trigger-wrapper" onclick="toggleGallery(this)">
+                    <div class="oasis-logo-circle">
+                        <img src="img/logo-oasis.jpeg" alt="Logo Agua Oasis" class="oasis-main-logo">
+                    </div>
+                    <div class="oasis-trigger-text-group">
+                        <span class="oasis-title">Sistema Administrativo — Agua Oasis</span>
+                        <span class="oasis-subtitle">Gestión integral de ventas, control de stock de bidones y logística diaria. <strong>Ver fotos</strong> <i class="fa-solid fa-chevron-down arrow-icon"></i></span>
+                    </div>
+                </div>
+
+                <div class="oasis-images-gallery">
+                    <div class="oasis-mini-item" onclick="openLightbox('oasis', 0)">
+                        <img src="img/oasis 1.jpg" alt="Oasis 1">
+                        <p><strong>Vista 1:</strong> Panel principal y control operativo.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('oasis', 1)">
+                        <img src="img/oasis 2.jpg" alt="Oasis 2">
+                        <p><strong>Vista 2:</strong> Gestión de inventario y bidones.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('oasis', 2)">
+                        <img src="img/oasis 3.jpg" alt="Oasis 3">
+                        <p><strong>Vista 3:</strong> Registro de clientes y pedidos.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('oasis', 3)">
+                        <img src="img/oasis 4.jpg" alt="Oasis 4">
+                        <p><strong>Vista 4:</strong> Logística y distribución.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('oasis', 4)">
+                        <img src="img/oasis 5.jpg" alt="Oasis 5">
+                        <p><strong>Vista 5:</strong> Reportes financieros y caja.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOFTWARE 2: SISTEMA DE TURNOS NEUROLAR -->
+            <div class="oasis-interactive-box">
+                <div class="oasis-trigger-wrapper" onclick="toggleGallery(this)">
+                    <div class="oasis-logo-circle">
+                        <img src="img/neurolar_logo_transparente.png" alt="Logo Neurolar" class="oasis-main-logo">
+                    </div>
+                    <div class="oasis-trigger-text-group">
+                        <span class="oasis-title">Sistema de Turnos y Agenda (Neurolar)</span>
+                        <span class="oasis-subtitle">Plataforma de turnos médicos con <strong>búsqueda inteligente</strong> de pacientes y sesiones. <strong>Ver fotos</strong> <i class="fa-solid fa-chevron-down arrow-icon"></i></span>
+                    </div>
+                </div>
+
+                <div class="oasis-images-gallery">
+                    <div class="oasis-mini-item" onclick="openLightbox('neurlar', 0)">
+                        <img src="img/neurlar 1.jpg" alt="Neurlar 1">
+                        <p><strong>Vista 1:</strong> Panel general de agenda y control de turnos.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('neurlar', 1)">
+                        <img src="img/neurolar 2.jpg" alt="Neurolar 2">
+                        <p><strong>Vista 2:</strong> Módulo de <strong>búsqueda inteligente</strong> de pacientes y sesiones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOFTWARE 3: PICCATO AUTOMOTORES -->
+            <div class="oasis-interactive-box">
+                <div class="oasis-trigger-wrapper" onclick="toggleGallery(this)">
+                    <div class="oasis-logo-circle">
+                        <img src="img/logo_piccato.jpg" alt="Logo Piccato Automotores" class="oasis-main-logo">
+                    </div>
+                    <div class="oasis-trigger-text-group">
+                        <span class="oasis-title">Sistema de Gestión — Piccato Automotores</span>
+                        <span class="oasis-subtitle">Gestión integral de vehículos, inventario y control de ventas. <strong>Ver fotos</strong> <i class="fa-solid fa-chevron-down arrow-icon"></i></span>
+                    </div>
+                </div>
+
+                <div class="oasis-images-gallery">
+                    <div class="oasis-mini-item" onclick="openLightbox('piccato', 0)">
+                        <img src="img/picato 1.jpg" alt="Piccato 1">
+                        <p><strong>Vista 1:</strong> Panel principal y catálogo de vehículos.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('piccato', 1)">
+                        <img src="img/picato 2.jpg" alt="Piccato 2">
+                        <p><strong>Vista 2:</strong> Administración de stock y fichas técnicas.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('piccato', 2)">
+                        <img src="img/picato 3.jpg" alt="Piccato 3">
+                        <p><strong>Vista 3:</strong> Control de clientes y cotizaciones.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('piccato', 3)">
+                        <img src="img/picato 4.jpg" alt="Piccato 4">
+                        <p><strong>Vista 4:</strong> Registro financiero y transacciones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOFTWARE 4: SISTEMA MG -->
+            <div class="oasis-interactive-box">
+                <div class="oasis-trigger-wrapper" onclick="toggleGallery(this)">
+                    <div class="oasis-logo-circle">
+                        <img src="img/logo_mg_transparente.png" alt="Logo MG" class="oasis-main-logo">
+                    </div>
+                    <div class="oasis-trigger-text-group">
+                        <span class="oasis-title">Sistema Administrativo — MG</span>
+                        <span class="oasis-subtitle">Sistema de gestión comercial y control administrativo adaptado. <strong>Ver fotos</strong> <i class="fa-solid fa-chevron-down arrow-icon"></i></span>
+                    </div>
+                </div>
+
+                <div class="oasis-images-gallery">
+                    <div class="oasis-mini-item" onclick="openLightbox('mg', 0)">
+                        <img src="img/mg 1.jpg" alt="MG 1">
+                        <p><strong>Vista 1:</strong> Panel principal y visualización de datos.</p>
+                    </div>
+                    <div class="oasis-mini-item" onclick="openLightbox('mg', 1)">
+                        <img src="img/mg 2.jpg" alt="MG 2">
+                        <p><strong>Vista 2:</strong> Módulo de operaciones y registros.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Futurista -->
+    <footer class="footer">
+        <div class="footer-glow-bar"></div>
+        
+        <img src="../img/Ondas Naranjas Paramétricas en Espiral.png" alt="Ondas Naranjas Espiral" class="footer-floating-waves">
+
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../img/logo_general_transparente.png" alt="NEUTRO Logo" class="footer-logo">
+                <p>Soluciones Digitales a la medida de tu futuro.</p>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../nosotros.html">Nosotros</a></li>
+                    <li><a href="../servicios.html">Servicios</a></li>
+                    <li><a href="../proyectos.html">Proyectos</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Conéctate</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/neutro_s.d" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://wa.me/5493804103864?text=Hola%20NEUTRO,%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" class="social-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=neutro.soluciones.digitales@gmail.com" target="_blank" class="social-btn"><i class="fa-regular fa-envelope"></i> Gmail</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2027 NEUTRO Soluciones Digitales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL LIGHTBOX PARA VER IMÁGENES EN GRANDE CON NAVEGACIÓN -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">×</span>
+        <button class="lightbox-btn lightbox-prev" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        
+        <div class="lightbox-content-wrapper">
+            <img id="lightboxImg" class="lightbox-image" src="" alt="Imagen ampliada">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+        
+        <button class="lightbox-btn lightbox-next" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Script de navegación y lightbox unificado -->
+    <script>
+        function toggleGallery(element) {
+            const interactiveBox = element.closest('.oasis-interactive-box');
+            const gallery = interactiveBox.querySelector('.oasis-images-gallery');
+            const arrow = interactiveBox.querySelector('.arrow-icon');
+            
+            gallery.classList.toggle('show-gallery');
+            arrow.classList.toggle('rotate-arrow');
+        }
+
+        const datasets = {
+            oasis: [
+                { src: "img/oasis 1.jpg", caption: "Vista 1: Panel principal y control operativo." },
+                { src: "img/oasis 2.jpg", caption: "Vista 2: Gestión de inventario y bidones." },
+                { src: "img/oasis 3.jpg", caption: "Vista 3: Registro de clientes y pedidos." },
+                { src: "img/oasis 4.jpg", caption: "Vista 4: Logística y distribución." },
+                { src: "img/oasis 5.jpg", caption: "Vista 5: Reportes financieros y caja." }
+            ],
+            neurlar: [
+                { src: "img/neurlar 1.jpg", caption: "Vista 1: Panel general de agenda y control de turnos." },
+                { src: "img/neurolar 2.jpg", caption: "Vista 2: Módulo de búsqueda inteligente de pacientes y sesiones." }
+            ],
+            piccato: [
+                { src: "img/picato 1.jpg", caption: "Vista 1: Panel principal y catálogo de vehículos." },
+                { src: "img/picato 2.jpg", caption: "Vista 2: Administración de stock y fichas técnicas." },
+                { src: "img/picato 3.jpg", caption: "Vista 3: Control de clientes y cotizaciones." },
+                { src: "img/picato 4.jpg", caption: "Vista 4: Registro financiero y transacciones." }
+            ],
+            mg: [
+                { src: "img/mg 1.jpg", caption: "Vista 1: Panel principal y visualización de datos." },
+                { src: "img/mg 2.jpg", caption: "Vista 2: Módulo de operaciones y registros." }
+            ]
+        };
+
+        let currentDatasetName = 'oasis';
+        let currentIndex = 0;
+
+        function openLightbox(setName, index) {
+            currentDatasetName = setName;
+            currentIndex = index;
+            updateLightboxContent();
+            document.getElementById('lightboxModal').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').style.display = 'none';
+        }
+
+        function changeSlide(direction) {
+            const currentList = datasets[currentDatasetName];
+            currentIndex += direction;
+            if (currentIndex >= currentList.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = currentList.length - 1;
+            }
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const currentList = datasets[currentDatasetName];
+            document.getElementById('lightboxImg').src = currentList[currentIndex].src;
+            document.getElementById('lightboxCaption').innerText = currentList[currentIndex].caption;
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('lightboxModal');
+            if (event.target === modal) {
+                closeLightbox();
+            }
+        }
+    </script>
+
+</body>
+</html>
